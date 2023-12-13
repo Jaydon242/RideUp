@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RideUp; A ride please!</title>
+  <link rel="stylesheet" type="text/css" href="RideUp.css">
+</head>
+<body>
+    <logo><h1> RideUp </h1></logo>
+    
+  <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">More</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Home</a>
+  </div>
+</div>
+
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+    // Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}</script>
+ <h2 style="color:blue; text-align:center;padding-block-start:180px;margin:0 auto;"> Become a driver and get paid </h2>
+  <form action="/signup" method="post">
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="email" name="email" placeholder="Email">
+    <input type="submit" value="Sign Up">
+  </form>
+  
+  <!-- animated (RideUp) text canvas --align-->
+<canvas id="myCanvas" width="400" height="50" style="border:1px solid #000000;width:100%;display:inline;text-align:center;background-color:skyblue;">
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+            // Create a Gradient
+const grd = ctx.createLinearGradient(0, 0, 170, 0);
+grd.addColorStop(0, "black");
+grd.addColorStop(1, "white");
+grd.addColorStop(0.5, "yellow");
+ctx.direction="ltr";
+ctx.textAlign = "end";
+ctx.fillStyle = grd;
+ctx.fillText("RideUp", 150, 30);
+ctx.direction="rtl";
+ctx.textAlign = "left";
+ctx.fillText("RideUp", 150, 40);
+</script>
+        <!--update alt"" name,,,div-->
+<div class="container">
+  <img src="FirstImg.jpg" alt="Downtown Nassau" style="width:100%;">
+  <div class="content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum..</p>
+  </div>
+</div>
+<hr class="solid">
+        <!--body information--> 
+    <div class="note">
+<h1 style="color:royalblue; text-decoration-thickness:5px; font-weight:bold;font-spacing:50px;font-size:large;">SAFETY ALWAYS<br> IN MIND</h1>
+<br>
+    <p>There is now a high demand for individuals
+to get from point A to point B now than
+ever before. The demand will increase
+and we are here to compensate.
+<br>
+<br>
+Providing a platform for you to safely
+request a ride and get from your location
+to your destination with simplicity
+availability, reliability, and safely.
+    </p>
+    </div>
+    <div class="note2">
+      <h1 style="color:white; text-decoration-thickness:5px; font-weight:bold; font-spacing:50px;">
+        FIRST TO SET
+            <br>
+        IN MOTION
+      </h1>
+    <br>
+    <p style="font-size:24;">Exuma is one of the most beautiful islands
+of The Bahamas. Our services are located
+currently in Exuma and readily useful.
+    </p>
+
+    <br>
+    <p style="font-size:32; font-style:italic;">Request a ride now for the Island of
+        Exuma, Bahamas
+    </p>
+    
+<button class="btn"><a href="https://www.google.com">Learn More</a></button>
+</div>
+
+<img src="a-driver-pov.jpg" alt="Your ride when you need it" style="width:100%;">
+</body>
+</html>
